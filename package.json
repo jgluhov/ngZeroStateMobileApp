@@ -1,0 +1,23 @@
+{
+  "name": "ngZeroStateMobileApp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "browser-sync": "^2.10.0",
+    "cheerio": "^0.19.0",
+    "csp-parse": "^0.0.2",
+    "elementtree": "^0.1.6",
+    "glob": "^5.0.15",
+    "npm": "^2.14.11",
+    "plist": "^1.2.0",
+    "q": "^1.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -8,3 +8,4 @@ cmd: "cordova run -- --live-reload --ignore=lib/**/*.*"
 content="default-src *; style-src 'self' 'unsafe-inline';"
 ## Cmd to run
 cmd: "weinre --boundHost -all-"
+

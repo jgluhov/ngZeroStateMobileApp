@@ -54,43 +54,49 @@
 
 'use strict';
 
-var sampleApp = angular.module('sampleApp', ['ui.router']);
-
-sampleApp.controller('sampleController', ['$scope', '$location', function ($scope, $location) {
-  console.log('HelloSampleController');
-}]);
-
-sampleApp.controller('signinController', ['$scope', '$location', function ($scope, $location) {
-  console.log('HelloSigninController');
-}]);
-
-sampleApp.controller('signupController', ['$scope', '$location', function ($scope, $location) {
-  console.log('HelloSignupController');
-}]);
-///platforms/ios/www/index.html
-sampleApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
-    function ($stateProvider, $urlRouterProvider, $locationProvider) {
-      $locationProvider.html5Mode({
-        enabled: true,
-        requireBase: false
-      });
-      $urlRouterProvider.otherwise("/");
-      $stateProvider
-        .state("/", {
-          templateUrl: "templates/home.html",
-          controller: "sampleController"
-        })
-        .state("signin", {
-          templateUrl: "templates/signin.html",
-          controller: "signinController"
-        })
-        .state("signup", {
-          templateUrl: "templates/signup.html",
-          controller: "signupController"
-        })
-    }
-  ]
-);
+//var sampleApp = angular.module('sampleApp', ['ui.router']);
+//
+//sampleApp.controller('sampleController', ['$scope', '$location', function ($scope, $location) {
+//  console.log('SampleController');
+//}]);
+//
+//sampleApp.controller('signinController', ['$scope', '$location', function ($scope, $location) {
+//  console.log('HelloSigninController');
+//}]);
+//
+//sampleApp.controller('signupController', ['$scope', '$location', function ($scope, $location) {
+//  console.log('HelloSignupController');
+//}]);
+/////platforms/ios/www/index.html
+//sampleApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
+//    function ($stateProvider, $urlRouterProvider, $locationProvider) {
+//      $locationProvider.html5Mode({
+//        enabled: true,
+//        requireBase: false
+//      });
+//
+//      $urlRouterProvider.otherwise('/');
+//
+//        $stateProvider
+//          .state('/', {
+//            url: '/',
+//            templateUrl: "templates/home.html",
+//            controller: "sampleController"
+//          })
+//        .state("signin", {
+//          url: '/signin',
+//          templateUrl: "templates/signin.html",
+//          controller: "signinController"
+//        })
+//        .state("signup", {
+//          url: '/signup',
+//          templateUrl: "templates/signup.html",
+//          controller: "signupController"
+//        })
+//
+//    }
+//  ]
+//);
 
 var CordovaInit = function () {
 
@@ -100,7 +106,7 @@ var CordovaInit = function () {
 
   var receivedEvent = function (event) {
     console.log('Start event received, bootstrapping application setup.');
-    angular.bootstrap($('body'), ['sampleApp']);
+    angular.bootstrap($('body'), ['ngZeroStateMobileApp']);
   };
 
   this.bindEvents = function () {

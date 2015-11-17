@@ -25,6 +25,6 @@ gulp.task('templates', function() {
     .pipe(gulp.dest('./www/templates'))
 });
 
-gulp.task('default', ['vendor', 'templates'], function() {
-
+gulp.task('default', ['vendor', 'scripts', 'templates'], function() {
+  gulp.watch('./src/js/**/*.js', ['scripts']);
 });

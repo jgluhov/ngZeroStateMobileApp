@@ -14,6 +14,7 @@ gulp.task('vendor', function() {
 
 gulp.task('scripts', function() {
   gulp.src('./src/js/*.js')
+    .pipe(browserify({ insertGlobals : true }))
     .pipe(concat('app.js'))
     .pipe(gulp.dest('./www/js'))
 });

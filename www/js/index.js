@@ -57,7 +57,7 @@
 var sampleApp = angular.module('sampleApp', ['ui.router']);
 
 sampleApp.controller('sampleController', ['$scope', '$location', function ($scope, $location) {
-  console.log('HelloSampleController');
+  console.log('SampleController');
 }]);
 
 sampleApp.controller('signinController', ['$scope', '$location', function ($scope, $location) {
@@ -74,20 +74,26 @@ sampleApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
         enabled: true,
         requireBase: false
       });
-      $urlRouterProvider.otherwise("/");
-      $stateProvider
-        .state("/", {
-          templateUrl: "templates/home.html",
-          controller: "sampleController"
-        })
+
+      $urlRouterProvider.otherwise('/');
+
+        $stateProvider
+          .state('/', {
+            url: '/',
+            templateUrl: "templates/home.html",
+            controller: "sampleController"
+          })
         .state("signin", {
+          url: '/signin',
           templateUrl: "templates/signin.html",
           controller: "signinController"
         })
         .state("signup", {
+          url: '/signup',
           templateUrl: "templates/signup.html",
           controller: "signupController"
         })
+
     }
   ]
 );

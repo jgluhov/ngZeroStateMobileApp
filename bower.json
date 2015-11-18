@@ -1,0 +1,25 @@
+{
+  "name": "ngZeroStateMobileApp",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "jgluhov <jgluhov@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/jgluhov/ngZeroStateMobileApp",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "~1.4.7",
+    "uikit": "~2.23.0",
+    "angular-ui-router": "~0.2.15",
+    "angular-touch": "~1.4.7",
+    "jquery": "~2.1.4"
+  }
+}

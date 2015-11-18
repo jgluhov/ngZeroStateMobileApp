@@ -6,21 +6,19 @@ module.exports = function(app) {
           requireBase: false
         });
 
-        $urlRouterProvider.otherwise('/');
+        $urlRouterProvider.otherwise('/platforms/ios/www/index.html');
 
         $stateProvider
-          .state('/', {
-            url: '/',
+          .state('home', {
+            url: '/platforms/ios/www/index.html',
             templateUrl: "templates/home.html",
             controller: "homeController"
           })
           .state("signin", {
-            url: '/signin',
             templateUrl: "templates/signin.html",
             controller: "signinController"
           })
           .state("signup", {
-            url: '/signup',
             templateUrl: "templates/signup.html",
             controller: "signupController"
           })

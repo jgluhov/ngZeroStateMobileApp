@@ -3,3 +3,6 @@ node_modules
 
 # JetBrains directory
 .idea
+
+# Bower directory
+bower_components

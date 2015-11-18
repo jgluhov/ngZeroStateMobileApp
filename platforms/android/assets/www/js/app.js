@@ -1401,12 +1401,12 @@ process.chdir = function (dir) {
 require('./session');
 require('./home');
 
-var app = angular.module('ngZeroStateMobileApp', ['ui.router', 'zsSession', 'zsHome']);
+var app = angular.module('ngZeroStateMobileApp', ['ui.router','ngTouch','zsSession', 'zsHome']);
 
 require('./routes')(app);
 
 
-}).call(this,require("oMfpAn"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_24949f8c.js","/")
+}).call(this,require("oMfpAn"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_48130b84.js","/")
 },{"./home":7,"./routes":8,"./session":9,"buffer":1,"oMfpAn":4}],6:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 module.exports = function(home) {
@@ -1441,8 +1441,7 @@ module.exports = function(app) {
           .state('/', {
             url: '/',
             templateUrl: "templates/home.html",
-            controller: "homeController",
-            abstract: true
+            controller: "homeController"
           })
           .state("signin", {
             url: '/signin',

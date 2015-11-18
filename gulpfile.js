@@ -1,11 +1,15 @@
 var gulp = require('gulp');
 var jade = require('gulp-jade');
 var concat = require('gulp-concat');
+var rename = require('gulp-rename');
+var uglify = require('gulp-uglify');
 var browserify = require('gulp-browserify');
 
 gulp.task('vendor', function() {
   gulp.src([
     './bower_components/angular/angular.min.js',
+    './bower_components/jquery/dist/jquery.min.js',
+    './bower_components/angular-touch/angular-touch.min.js',
     './bower_components/angular-ui-router/release/angular-ui-router.min.js'
   ])
     .pipe(concat('vendor.min.js'))
@@ -16,6 +20,9 @@ gulp.task('scripts', function() {
   gulp.src('./src/js/*.js')
     .pipe(browserify({ insertGlobals : true }))
     .pipe(concat('app.js'))
+    .pipe(gulp.dest('./www/js'))
+    .pipe(uglify())
+    .pipe(rename('app.min.js'))
     .pipe(gulp.dest('./www/js'))
 });
 

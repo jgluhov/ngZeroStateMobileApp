@@ -12,8 +12,7 @@ module.exports = function(app) {
           .state('/', {
             url: '/',
             templateUrl: "templates/home.html",
-            controller: "homeController",
-            abstract: true
+            controller: "homeController"
           })
           .state("signin", {
             url: '/signin',
